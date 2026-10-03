@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>일광자이푸르지오 게스트하우스</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#fff;--soft:#f4f6fa;--card:#fff;--ink:#1c1c1c;--mute:#666;--line:#e1e4ea;--main:#1428a0;--on:#fff;--hero:#0c1a6b;--brass:#2f5bea;--ok:#2f7d4f;--wait:#c27a10;--no:#c0392b;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101521;--soft:#171d2d;--card:#171d2d;--ink:#eef1f8;--mute:#a3adc2;--line:#2a3350;--main:#8da0ff;--on:#101521;--hero:#1a2560;--brass:#8da0ff;--ok:#5fc08a;--wait:#e0a940;--no:#e07a69}}
+:root[data-theme="dark"]{--bg:#101521;--soft:#171d2d;--card:#171d2d;--ink:#eef1f8;--mute:#a3adc2;--line:#2a3350;--main:#8da0ff;--on:#101521;--hero:#1a2560;--brass:#8da0ff;--ok:#5fc08a;--wait:#e0a940;--no:#e07a69}
+*{box-sizing:border-box}html{scroll-padding-top:70px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 "Noto Sans KR",system-ui,sans-serif}
+h1,h2,h3{margin:0;line-height:1.35;font-weight:700}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+#notice{background:var(--soft);border-bottom:1px solid var(--line);font-size:14px}
+#notice .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:8px;padding-bottom:8px}
+#notice button{background:none;border:0;color:var(--mute);cursor:pointer;font:inherit}
+header.top{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+.logo{font-weight:700;font-size:19px;color:var(--ink);text-decoration:none;white-space:nowrap}.logo b{color:var(--main)}
+nav{display:flex;gap:22px;overflow-x:auto}nav a{color:var(--ink);text-decoration:none;font-size:15px;font-weight:500;white-space:nowrap}nav a:hover{color:var(--main)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--brass);outline-offset:2px}
+.hero{background:var(--hero);color:#fff;padding:56px 0 64px;text-align:center}
+.hero h1{font-size:clamp(28px,5vw,44px);margin-bottom:12px}.hero p{margin:0 0 28px;opacity:.85}
+.qbar{display:flex;align-items:center;gap:8px;background:#fff;color:#222;border-radius:999px;padding:8px 8px 8px 24px;max-width:680px;margin:0 auto;text-align:left}
+.qbar label{flex:1;display:grid;font-size:12px;color:#666;gap:0}.qbar input{border:0;background:transparent;color:#222;padding:2px 0;font:inherit;width:100%}
+.btn{display:inline-block;background:var(--main);color:var(--on);border:0;border-radius:999px;padding:12px 26px;font:600 15px "Noto Sans KR",sans-serif;cursor:pointer;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--main);border:1px solid var(--main)}.btn.sm{padding:6px 14px;font-size:13px}.btn.red{background:var(--no);color:#fff}
+.menu{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.tile{display:flex;flex-direction:column;align-items:center;gap:6px;padding:20px 8px;background:var(--soft);border-radius:18px;text-decoration:none;color:var(--ink);font-weight:500;font-size:14px}
+.tile span{font-size:30px;line-height:1}.tile:hover{outline:2px solid var(--main)}
+section{padding:56px 0}section.alt{background:var(--soft)}
+section>.wrap>h2{font-size:26px;text-align:center;margin-bottom:8px}.lead{color:var(--mute);margin:0 0 28px;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px}.box h3{font-size:18px;margin-bottom:6px}.box p{margin:0;color:var(--mute);font-size:15px}
+.price{width:100%;max-width:640px;margin:0 auto;border-collapse:collapse;background:var(--card);border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.price td,.price th{padding:14px 18px;border-bottom:1px solid var(--line);text-align:left}.price th{background:var(--soft)}.price td:last-child,.price th:last-child{text-align:right}
+.rules{padding-left:20px;margin:0}.rules li{margin-bottom:6px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+form.f{display:grid;gap:12px}label{font-size:14px;color:var(--mute);display:grid;gap:4px}
+.f input,.f select,.f textarea{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 12px;width:100%}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.est{background:var(--card);border:1px dashed var(--brass);border-radius:8px;padding:10px 14px;font-size:15px}
+.cal{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.cal-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}.cal-h b{font-size:17px}
+.cal-g{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center;font-size:13px}
+.cal-g i{font-style:normal;color:var(--mute);padding:4px 0}
+.cal-g div{padding:8px 0;border-radius:8px;background:var(--soft)}.cal-g .ok{background:var(--no);color:#fff}.cal-g .wt{background:var(--wait);color:#fff}
+.legend{font-size:13px;color:var(--mute);margin-top:8px}
+.msg{margin-top:8px;font-size:14px;min-height:20px}.msg.err{color:var(--no)}.msg.good{color:var(--ok)}
+#admin{display:none}body[data-admin="1"] #admin{display:block}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}.stats .box{text-align:center}.stats .box b{font-size:30px;color:var(--main);display:block}
+.item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:10px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+.tag{font-size:12px;font-weight:600;padding:2px 8px;border-radius:99px;color:#fff;margin-left:6px}.tag.pending{background:var(--wait)}.tag.approved{background:var(--ok)}.tag.rejected{background:var(--no)}
+.acts{display:flex;gap:6px}
+footer{background:var(--soft);padding:32px 0 48px;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
+footer .fl{display:flex;flex-wrap:wrap;gap:18px;margin-bottom:12px;font-weight:600;color:var(--ink)}footer p{margin:2px 0}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:8px;z-index:6}
+.fab a{width:52px;height:52px;border-radius:50%;background:var(--main);color:var(--on);display:grid;place-items:center;text-decoration:none;font-size:13px;font-weight:600;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.fab a.up{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+@media(max-width:700px){.two{grid-template-columns:1fr}.row{grid-template-columns:1fr}.menu{grid-template-columns:repeat(3,1fr)}
+.qbar{flex-direction:column;align-items:stretch;border-radius:20px;padding:14px}.qbar .btn{width:100%}header.top .wrap{height:auto;padding-top:8px;padding-bottom:8px;flex-direction:column;gap:6px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body data-admin="0">
+<div id="notice"><div class="wrap"><span><b>[공지]</b> 샘플 공지입니다. 휴무·공사 등 안내 사항을 이곳에 적어 주세요.</span><button id="nclose" aria-label="공지 닫기">닫기</button></div></div>
+<header class="top"><div class="wrap">
+<a class="logo" href="#top"><b>일광자이푸르지오</b> 게스트하우스</a>
+<nav><a href="#about">소개</a><a href="#rooms">시설</a><a href="#fee">요금</a><a href="#rules">이용 안내</a><a href="#book">예약</a><a href="#" id="adminLink">관리자</a></nav>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<h1>어떤 날짜에 머무실 건가요?</h1>
+<p>입주민의 손님을 위한 단지 안 게스트하우스예요.</p>
+<form class="qbar" id="qbar"><label>체크인<input type="date" id="qci" required></label><label>체크아웃<input type="date" id="qco" required></label><button class="btn" type="submit">예약하기</button></form>
+</div></div>
+
+<section><div class="wrap">
+<h2>궁금하신 메뉴를 선택하세요</h2>
+<p class="lead">원하는 항목을 누르면 해당 안내로 이동해요.</p>
+<div class="menu">
+<a class="tile" href="#book"><span>📅</span>예약 신청</a>
+<a class="tile" href="#about"><span>🏠</span>소개</a>
+<a class="tile" href="#rooms"><span>🛏️</span>시설 안내</a>
+<a class="tile" href="#fee"><span>💳</span>요금 안내</a>
+<a class="tile" href="#rules"><span>📋</span>이용 안내</a>
+<a class="tile" href="#contact"><span>📞</span>문의</a>
+</div>
+</div></section>
+
+<section id="about" class="alt"><div class="wrap">
+<h2>게스트하우스 소개</h2>
+<p class="lead">입주민의 손님이 이용하는 단지 내 숙소입니다. 호텔보다 가깝고, 집보다 부담 없이 쉬어 가실 수 있어요.</p>
+<div class="grid">
+<div class="box"><h3>단지 안에 있어요</h3><p>손님을 마중하고 배웅하기 쉬운 거리예요. 따로 이동할 필요가 없습니다.</p></div>
+<div class="box"><h3>깔끔하게 관리해요</h3><p>이용 후 매번 청소와 침구 교체를 하고 있어요.</p></div>
+<div class="box"><h3>합리적인 요금</h3><p>입주민을 위한 운영 목적의 요금으로 부담을 줄였어요.</p></div>
+</div>
+</div></section>
+
+<section id="rooms"><div class="wrap">
+<h2>객실 및 시설</h2>
+<p class="lead">아래는 예시 내용입니다. 실제 시설에 맞게 수정해 주세요.</p>
+<div class="grid">
+<div class="box"><h3>침실</h3><p>바닥에 설치하는 침구류로 2인 기준(최대 4인)까지 이용할 수 있어요.</p></div>
+<div class="box"><h3>욕실</h3><p>샤워 부스, 기본 세면도구를 준비해 두었습니다.</p></div>
+<div class="box"><h3>주방·거실</h3><p>냉장고, 전자레인지, TV와 와이파이.</p></div>
+<div class="box"><h3>편의 시설</h3><p>에어컨, 난방, 헤어드라이어.</p></div>
+</div>
+</div></section>
+
+<section id="fee" class="alt"><div class="wrap">
+<h2>이용 요금</h2>
+<p class="lead">1박 기준 요금입니다.</p>
+<table class="price">
+<tr><th>구분</th><th>요금</th></tr>
+<tr><td>평일, 주말</td><td>50,000원</td></tr>
+<tr><td>침구 추가</td><td>15,000원</td></tr>
+</table>
+</div></section>
+
+<section id="rules"><div class="wrap">
+<h2>이용 안내</h2>
+<div class="two">
+<div class="box"><h3>시간</h3><ul class="rules"><li>체크인 15:00 이후</li><li>체크아웃 11:00 이전</li><li>정숙 시간 22:00 ~ 07:00</li></ul></div>
+<div class="box"><h3>규칙</h3><ul class="rules"><li>실내 전체 금연</li><li>반려동물 동반 불가</li><li>시설물 훼손 시 실비 청구</li><li>이용일 5일 이내 취소 시 이용금액의 50% 부과, 이용일 10일 이내 취소 시 이용금액의 50% 부과, 예약 당일 취소 시 100% 부과</li></ul></div>
+</div>
+</div></section>
+
+<section id="book" class="alt"><div class="wrap">
+<h2>예약 신청</h2>
+<p class="lead">신청하면 관리자가 확인 후 연락드립니다. 달력의 붉은 날은 이미 예약되어 있어요.</p>
+<div class="two">
+<form id="bf" class="f" novalidate>
+<div class="row"><label>체크인<input type="date" id="ci" required></label><label>체크아웃<input type="date" id="co" required></label></div>
+<div class="row"><label>인원<select id="gs"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></label><label>이름<input id="nm" required autocomplete="name"></label></div>
+<div class="row"><label>동·호수<input id="ho" placeholder="예: 101동 1203호" required></label><label>연락처<input id="ph" type="tel" placeholder="010-0000-0000" required autocomplete="tel"></label></div>
+<label style="display:flex;align-items:center;gap:8px;font-size:15px;color:var(--ink)"><input type="checkbox" id="bd" style="width:auto"> 침구 추가 (15,000원)</label>
+<label>요청사항<textarea id="nt" rows="2"></textarea></label>
+<div class="est" id="est">날짜를 선택하면 예상 요금이 표시됩니다.</div>
+<button class="btn" type="submit">예약 신청하기</button>
+<div class="msg" id="bm" role="status"></div>
+</form>
+<div><div class="cal" id="pubCal"></div></div>
+</div>
+</div></section>
+
+<section id="admin"><div class="wrap">
+<h2>관리자 화면</h2>
+<p class="lead">예약 신청을 확인하고 승인하거나 거절할 수 있어요.</p>
+<div class="stats" id="stats"></div>
+<div class="two" style="align-items:start">
+<div><h3 style="margin-bottom:10px">신청 목록</h3><div id="list"></div></div>
+<div><div class="cal" id="admCal"></div></div>
+</div>
+<p style="margin-top:16px"><button class="btn ghost sm" id="logout">관리자 모드 끄기</button></p>
+</div></section>
+</main>
+
+<footer id="contact"><div class="wrap">
+<div class="fl"><span>이용약관</span><span>개인정보처리방침</span><span>관리사무소 안내</span></div>
+<p>주소 : 부산시 기장군 일광읍 해빛로 29</p>
+<p>운영 : 일광자이푸르지오 아파트 관리사무소 · 대표전화 : <a href="tel:0517143280" style="color:inherit">051-714-3280</a> (운영 시간 09:00–18:00)</p>
+<p>Copyright © 일광자이푸르지오 아파트 관리사무소. All rights reserved.</p>
+</div></footer>
+<div class="fab"><a href="#book">예약</a><a class="up" href="#top" aria-label="맨 위로">위로</a></div>
+
+<script>
+var KEY="gh_bookings_v1",PIN="1234",RATE={night:50000,bed:15000};
+var B=[];
+try{B=JSON.parse(localStorage.getItem(KEY)||"[]")}catch(e){B=[]}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(B))}catch(e){}}
+function $(i){return document.getElementById(i)}
+function iso(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+function nights(a,b){return Math.round((new Date(b)-new Date(a))/864e5)}
+function price(a,b,bd){return nights(a,b)*RATE.night+(bd?RATE.bed:0)}
+function won(n){return n.toLocaleString("ko-KR")+"원"}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function status(day,adm){var s="";B.forEach(function(b){if(day>=b.ci&&day<b.co){if(b.st=="approved")s="ok";else if(b.st=="pending"&&adm&&s!="ok")s="wt"}});return s}
+var cur=new Date();cur.setDate(1);
+function cal(el,adm){
+ var y=cur.getFullYear(),m=cur.getMonth(),first=new Date(y,m,1).getDay(),last=new Date(y,m+1,0).getDate();
+ var h='<div class="cal-h"><button class="btn ghost sm" type="button" data-n="-1" aria-label="이전 달">이전</button><b>'+y+'년 '+(m+1)+'월</b><button class="btn ghost sm" type="button" data-n="1" aria-label="다음 달">다음</button></div><div class="cal-g">';
+ "일월화수목금토".split("").forEach(function(d){h+="<i>"+d+"</i>"});
+ for(var i=0;i<first;i++)h+="<span></span>";
+ for(var d=1;d<=last;d++){var s=status(iso(new Date(y,m,d)),adm);h+='<div class="'+s+'">'+d+"</div>"}
+ h+='</div><div class="legend">붉은색: 예약 확정'+(adm?" · 주황색: 승인 대기":"")+"</div>";
+ el.innerHTML=h;
+ el.querySelectorAll("[data-n]").forEach(function(b){b.onclick=function(){cur.setMonth(cur.getMonth()+Number(b.dataset.n));renderAll()}});
+}
+function overlap(a,b){return B.some(function(x){return x.st=="approved"&&a<x.co&&b>x.ci})}
+function est(){var a=$("ci").value,b=$("co").value;
+ if(a&&b&&b>a)$("est").textContent=nights(a,b)+"박 예상 요금: "+won(price(a,b,$("bd").checked));
+ else $("est").textContent="날짜를 선택하면 예상 요금이 표시됩니다."}
+["ci","co","gs","bd"].forEach(function(i){$(i).onchange=est});
+var today=iso(new Date());$("ci").min=today;$("co").min=today;
+$("bf").onsubmit=function(e){e.preventDefault();var m=$("bm");m.className="msg err";
+ var a=$("ci").value,b=$("co").value;
+ if(!a||!b||b<=a){m.textContent="체크인과 체크아웃 날짜를 확인해 주세요. 체크아웃은 체크인 다음 날부터 가능해요.";return}
+ if(!$("nm").value.trim()||!$("ho").value.trim()||!$("ph").value.trim()){m.textContent="이름, 동·호수, 연락처를 모두 입력해 주세요.";return}
+ if(overlap(a,b)){m.textContent="선택한 기간에 이미 확정된 예약이 있어요. 다른 날짜를 선택해 주세요.";return}
+ B.push({id:Date.now(),ci:a,co:b,g:Number($("gs").value),bd:$("bd").checked,nm:$("nm").value.trim(),ho:$("ho").value.trim(),ph:$("ph").value.trim(),nt:$("nt").value.trim(),pr:price(a,b,$("bd").checked),st:"pending"});
+ save();$("bf").reset();est();m.className="msg good";m.textContent="신청이 접수되었어요. 관리자 확인 후 연락드리겠습니다.";renderAll()};
+var L={pending:"대기",approved:"확정",rejected:"거절"};
+function renderAdmin(){
+ var mm=cur.getFullYear()+"-"+String(cur.getMonth()+1).padStart(2,"0"),days=new Date(cur.getFullYear(),cur.getMonth()+1,0).getDate(),used=0,cnt=0;
+ B.forEach(function(b){if(b.st=="approved"){for(var d=1;d<=days;d++){var k=mm+"-"+String(d).padStart(2,"0");if(k>=b.ci&&k<b.co)used++}if(b.ci.slice(0,7)==mm)cnt++}});
+ var pend=B.filter(function(b){return b.st=="pending"}).length;
+ $("stats").innerHTML='<div class="box"><b>'+cnt+'건</b>이번 달 확정</div><div class="box"><b>'+pend+'건</b>승인 대기</div><div class="box"><b>'+Math.round(used/days*100)+'%</b>이번 달 이용률</div>';
+ var l=B.slice().sort(function(a,b){return a.ci<b.ci?-1:1});
+ $("list").innerHTML=l.length?l.map(function(b){return '<div class="item"><div><b>'+esc(b.nm)+'</b> '+esc(b.ho)+'<span class="tag '+b.st+'">'+L[b.st]+'</span><br><small>'+b.ci+' ~ '+b.co+' · '+b.g+'명'+(b.bd?' · 침구 추가':'')+' · '+won(b.pr)+'<br>'+esc(b.ph)+(b.nt?'<br>요청: '+esc(b.nt):'')+'</small></div><div class="acts">'+(b.st=="pending"?'<button class="btn sm" data-a="approved" data-i="'+b.id+'">승인</button><button class="btn sm red" data-a="rejected" data-i="'+b.id+'">거절</button>':'')+'<button class="btn ghost sm" data-a="del" data-i="'+b.id+'">삭제</button></div></div>'}).join(""):'<div class="box"><p>아직 들어온 예약 신청이 없어요.</p></div>';
+ $("list").querySelectorAll("[data-a]").forEach(function(btn){btn.onclick=function(){var id=Number(btn.dataset.i),a=btn.dataset.a;
+  var x=B.filter(function(b){return b.id==id})[0];
+  if(a=="del"){if(!confirm("이 예약을 삭제할까요?"))return;B=B.filter(function(b){return b.id!=id})}
+  else if(a=="approved"&&overlap(x.ci,x.co)){alert("확정된 다른 예약과 날짜가 겹쳐요.");return}
+  else x.st=a;
+  save();renderAll()}});
+}
+function renderAll(){cal($("pubCal"),false);cal($("admCal"),true);renderAdmin()}
+$("adminLink").onclick=function(e){e.preventDefault();
+ if(document.body.dataset.admin=="1"){$("admin").scrollIntoView();return}
+ var p=prompt("관리자 비밀번호를 입력하세요.");
+ if(p===PIN){document.body.dataset.admin="1";setTimeout(function(){$("admin").scrollIntoView()},50)}else if(p!==null)alert("비밀번호가 맞지 않아요.")};
+$("logout").onclick=function(){document.body.dataset.admin="0";window.scrollTo(0,0)};
+$("qci").min=today;$("qco").min=today;
+$("qbar").onsubmit=function(e){e.preventDefault();var a=$("qci").value,b=$("qco").value;
+ if(b<=a){alert("체크아웃은 체크인 다음 날부터 선택할 수 있어요.");return}
+ $("ci").value=a;$("co").value=b;est();$("book").scrollIntoView()};
+$("nclose").onclick=function(){$("notice").style.display="none"};
+renderAll();
+</script>
+</body>
+</html>
